@@ -1,0 +1,401 @@
+$color_1: #353C4C
+$color_2: #2E394B
+$color_3: #ff0000
+$color_4: #2c66c1
+$color_5: #b700c0
+$color_6: #36b5d0
+$color_7: #0a0a0a
+$color_8: #2435CE
+$color_9: #C62828
+$color_10: #1da1f2
+$color_11: #E03123
+$color_12: #EECCB5
+$color_13: #408D6E
+$color_14: #25587C
+$color_15: #326BAA
+$color_16: #B76D58
+$color_17: #4CA4A4
+$color_18: #6AA986
+$color_19: #2F6822
+$color_20: #801A14
+$color_21: #121F2F
+$color_22: #DBC867
+$color_23: #427D76
+$color_24: #5DC3F5
+$color_25: #63957F
+$color_26: #C54876
+$color_27: #3157A4
+$color_28: white
+$font_family_1: 'Josefin Sans', Arial, sans-serif
+$background_color_1: rgba(249, 249, 249, 0.9)
+$border_color_1: #C62828
+$border_color_2: #1da1f2
+$border_color_3: #E03123
+$border_color_4: #EECCB5
+
+html 
+	margin: 0
+	padding: 0
+	height: 100vh
+
+body 
+	margin: 0
+	padding: 0
+	height: 100vh
+	color: $color_1
+	background: #fff
+	font-weight: 300
+	font-family: $font_family_1
+
+svg 
+	overflow: visible
+
+.navbar-item 
+	color: $color_2
+	flex-direction: column
+	justify-content: center
+	transition: 0.5s all ease
+	>span
+		display: block
+	
+	>img 
+		max-height: inherit
+	
+	svg 
+		width: 38px
+		height: 38px
+		path 
+			fill: #2E394B !important
+		
+	
+
+.navbar-link 
+	color: $color_2
+	flex-direction: column
+	justify-content: center
+	transition: 0.5s all ease
+	&:hover 
+		color: $color_3
+		background-color: $background_color_1
+		color: $color_7
+	
+
+.navbar-link.is-active 
+	color: $color_3
+	background-color: $background_color_1
+	color: $color_7
+
+a.navbar-item.is-active 
+	color: $color_3
+	background-color: $background_color_1
+	color: $color_7
+
+a.navbar-item 
+	&:hover 
+		color: $color_3
+		background-color: $background_color_1
+		color: $color_7
+	
+
+#cdlogo 
+	img 
+		max-height: inherit
+	+tablet
+		width: 100px
+	+desktop
+		width: 200px
+	
+	&:hover 
+		background: transparent
+	
+
+
+#navMyContactInfo 
+	&:hover 
+		svg 
+			path 
+				fill: url(#myContactInfoGradient) !important
+			
+		
+		color: $color_4
+		background: rgba(44, 102, 193, 0.05)
+	
+
+#navMyWorks 
+	&:hover 
+		svg 
+			path 
+				fill: url(#myWorksGradient) !important
+			
+		
+		color: $color_5
+		background: rgba(183, 0, 192, 0.03)
+	
+
+#navAboutMe 
+	&:hover 
+		svg 
+			path 
+				fill: url(#aboutMeGradient) !important
+			
+		
+		color: $color_6
+		background: rgba(54, 181, 208, 0.07)
+	
+.navbar-end
+	+tablet
+	overflow: auto
+.navbar-item
+	+tablet
+	float: left
+	text-align: center
+	width: 33.33%
+
+.section
+	margin-bottom: 200px
+	
+
+h1.sectiontitle 
+	display: table
+	white-space: nowrap
+	font-size: 1.5em
+	margin: 50px auto 0px auto
+	color: $color_8
+	&:before 
+		border-top: 10px solid #2435CE
+		content: ''
+		display: table-cell
+		position: relative
+		top: 0.5em
+		width: 40%
+		right: 3.5%
+	
+	&:after 
+		border-top: 10px solid #2435CE
+		content: ''
+		display: table-cell
+		position: relative
+		top: 0.5em
+		width: 40%
+		left: 3.5%
+	
+
+.redborder 
+	color: $color_9 !important
+	&:after 
+		border-color: $border_color_1 !important
+	
+	&:before 
+		border-color: $border_color_1 !important
+	
+
+#aboutMe 
+	p 
+		line-height: 3rem
+	
+
+#myContactInfo 
+	p 
+		margin-bottom: 3rem
+	
+	.button 
+		transition: 0.2s all ease-in
+	
+	.button.twitter 
+		&:hover 
+			border-color: $border_color_2
+			color: $color_10
+		
+	
+	.button.instagram 
+		&:hover 
+			border-color: $border_color_3
+			color: $color_11
+		
+	
+	.button.github 
+		&:hover 
+			border-color: $border_color_4
+			color: $color_12
+		
+	
+		
+	
+
+#myWorks 
+	background: url(img/works_bg.svg) no-repeat
+	background-size: cover
+	background-position-y: 50px
+
+.carousel-cell 
+	max-width: 640px
+	max-height: 640px
+	width: 100%
+	margin-right: 5px
+	margin-left: 5px
+	border-radius: 5px
+	padding: 10px
+	counter-increment: carousel-cell
+	span 
+		text-transform: uppercase
+		margin-bottom: 20px
+		float: left
+		display: block
+		width: 100%
+		text-indent: 40px
+
+		&:before 
+			content: ""
+			width: 30px
+			height: 25px
+			display: block
+			position: absolute
+.carousel-cell span		
+	+desktop
+	margin-left: 45px
+	white-space: nowrap
+	overflow: hidden
+	+tablet
+	margin-left: 0px
+	img 
+		box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.13)
+		width: 90%
+		display: block
+		margin: 0px auto
+	
+	&:before 
+		display: block
+		text-align: center
+		line-height: 200px
+		font-size: 80px
+		color: $color_28
+	
+
+.flickity-page-dots
+	+tablet 
+		.dot 
+			background: rgba(0,0,0,0.7)
+		margin-bottom: -50px
+
+.carousel-cell.kirlilikbildirim 
+	span 
+		color: $color_13
+		&:before 
+			background: #408D6E
+		
+	
+
+.carousel-cell.karekoddurumsorgulama 
+	span 
+		color: $color_14
+		&:before 
+			background: #25587C
+		
+	
+
+.carousel-cell.onursalhukuk 
+	span 
+		color: $color_15
+		&:before 
+			background: #326BAA
+		
+	
+
+.carousel-cell.monoidegitim 
+	span 
+		color: $color_16
+		&:before 
+			background: #B76D58
+		
+	
+
+.carousel-cell.etkilesimlimobilegitim 
+	span 
+		color: $color_17
+		&:before 
+			background: #4CA4A4
+		
+	
+
+.carousel-cell.mobilharitaaraci 
+	span 
+		color: $color_18
+		&:before 
+			background: #6AA986
+		
+	
+
+.carousel-cell.havakirlilikdurumubir 
+	span 
+		color: $color_19
+		&:before 
+			background: #2F6822
+		
+	
+
+.carousel-cell.havakirlilikdurumuiki 
+	span 
+		color: $color_20
+		&:before 
+			background: #801A14
+		
+	
+
+.carousel-cell.infolinekurumsal 
+	span 
+		color: $color_21
+		&:before 
+			background: #121F2F
+		
+	
+
+.carousel-cell.yoneticipaneli 
+	span 
+		color: $color_22
+		&:before 
+			background: #DBC867
+		
+	
+
+.carousel-cell.mobilailetakip 
+	span 
+		color: $color_23
+		&:before 
+			background: #427D76
+		
+	
+
+.carousel-cell.hayvanbilgisistemi 
+	span 
+		color: $color_24
+		&:before 
+			background: #5DC3F5
+		
+	
+
+.carousel-cell.tarimsalsuizleyici 
+	span 
+		color: $color_25
+		&:before 
+			background: #63957F
+		
+	
+
+.carousel-cell.medikalasistan 
+	span 
+		color: $color_26
+		&:before 
+			background: #C54876
+		
+	
+
+.carousel-cell.gorevtakip 
+	span 
+		color: $color_27
+	
+
+.carousel-cell.yonetigorevtakipcipaneli 
+	span 
+		&:before 
+			background: #3157A4
+
